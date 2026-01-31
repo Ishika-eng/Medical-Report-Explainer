@@ -1,0 +1,228 @@
+:root {
+  /* Medical Trust Palette */
+  --primary: #00897b;
+  /* Teal 600 */
+  --primary-dark: #00695c;
+  --secondary: #26a69a;
+  --background: #f8f9fa;
+  /* Light Grey */
+  --surface: #ffffff;
+  --text: #1f2937;
+  /* Dark Grey */
+  --text-muted: #6b7280;
+  --border: #e2e8f0;
+
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #10b981;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius: 0.75rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Container */
+.main-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Custom Cards (Not Glass) */
+.custom-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.custom-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-primary:disabled {
+  background-color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.125rem;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+/* Parameter Grid */
+.param-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.param-item {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid transparent;
+}
+
+.status-high {
+  border-left-color: var(--danger);
+  background: #fef2f2;
+}
+
+.status-low {
+  border-left-color: var(--warning);
+  background: #fffbeb;
+}
+
+.status-normal {
+  border-left-color: var(--success);
+  background: #f0fdf4;
+}
+
+.badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.badge-high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-low {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-normal {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Tabs */
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Inputs */
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* File Upload */
+.upload-box {
+  border: 2px dashed var(--border);
+  padding: 3rem 1rem;
+  border-radius: var(--radius);
+  background: #f9fafb;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.upload-box:hover {
+  border-color: var(--primary);
+  background: #f0fdfa;
+}
